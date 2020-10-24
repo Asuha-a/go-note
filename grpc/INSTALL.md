@@ -52,3 +52,4 @@ require (
 ## References
 [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/)
 [Quick start-gRPC](https://grpc.io/docs/languages/go/quickstart/)
+[Cannot go-get protoc-gen-go-grpc with a specific version](https://github.com/grpc/grpc-go/issues/3727)
