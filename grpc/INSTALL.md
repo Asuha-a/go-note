@@ -9,8 +9,11 @@ protocは.protoファイルをコンパイルするために使う。
 Linux
 
 ```
-sudo apt install -y protobuf-compiler
-protoc --version
+PROTOC_ZIP=protoc-3.7.1-linux-x86_64.zip
+curl -OL https://github.com/protocolbuffers/protobuf/releases/download/v3.7.1/$PROTOC_ZIP
+sudo unzip -o $PROTOC_ZIP -d /usr/local bin/protoc
+sudo unzip -o $PROTOC_ZIP -d /usr/local 'include/*'
+rm -f $PROTOC_ZIP
 ```
 
 ```
@@ -53,3 +56,4 @@ require (
 [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/)
 [Quick start-gRPC](https://grpc.io/docs/languages/go/quickstart/)
 [Cannot go-get protoc-gen-go-grpc with a specific version](https://github.com/grpc/grpc-go/issues/3727)
+[Installing protoc](http://google.github.io/proto-lens/installing-protoc.html)
