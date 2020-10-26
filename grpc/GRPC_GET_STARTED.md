@@ -45,5 +45,14 @@ go run greeter_client/main.go
 ```
 これでgRPCを使った通信に成功しました。  
 
+## gRPCのコード生成
+次のコマンドを実行します。
+
+```
+protoc --go_out=. --go_opt=paths=source_relative \
+    --go-grpc_out=. --go-grpc_opt=paths=source_relative \
+    helloworld/helloworld.proto
+```
+
 ## References
 [Quick start-gRPC](https://grpc.io/docs/languages/go/quickstart/)
