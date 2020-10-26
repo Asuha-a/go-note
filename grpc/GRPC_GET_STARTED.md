@@ -54,5 +54,20 @@ protoc --go_out=. --go_opt=paths=source_relative \
     helloworld/helloworld.proto
 ```
 
+```
+protoc-gen-go: program not found or is not executable
+```
+が表示された場合は以下を.bashrcもしくは.zshrcに追加する。
+
+```
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOROOT:$GOPATH:$GOBIN
+```
+
+sourceを忘れずに
+
 ## References
 [Quick start-gRPC](https://grpc.io/docs/languages/go/quickstart/)
+[protoc-gen-go: program not found or is not executable · Issue #795 · golang/protobuf](https://github.com/golang/protobuf/issues/795)
