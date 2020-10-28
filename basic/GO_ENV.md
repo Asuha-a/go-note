@@ -2,6 +2,6 @@
 
 次のコマンドでgo.modを作成できる。
 
-```
+```terminal
 go mod init
 ```
